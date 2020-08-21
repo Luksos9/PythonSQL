@@ -1,11 +1,19 @@
-entries = []
+import sqlite3
+
+connection = sqlite3.connect("data.db")
+
+def create_table():
+    with connection:
+        connection.execute(
+            "CREATE TABLE IF NOT EXISTS entries (content TEXT, date TEXT);"
+        )
 
 
 def add_entry(entry_content, entry_date):
-    entry_content = input("What have you learned today?")
-    entry_date = input("Enter the date: ")
-
-    entries.append({"content": entry_content, "date": entry_date})
+    with connection:#this is important because without it, it will not be commited so i wont be able to see it anywhere
+        connection.execute(
+            f"INSERT INTO entries VALUES(?, ?);", (entry_content, entry_date)
+        )
 
 def get_entries():
     return entries
