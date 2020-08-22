@@ -4,11 +4,11 @@
 2) To view the entries that he made
 3) To exit
 
-It stores all data in data.db file so after closing the program, data is not lost.
+> It stores all data in data.db file so after closing the program, data is not lost.
 
 ## Table of contents
 * [General info](#general-info)
-* [What I Learned](#learned)
+* [What I Learned](#what-i-learned)
 * [Technologies](#technologies)
 * [Status](#status)
 * [Inspiration](#inspiration)
@@ -45,10 +45,11 @@ Project is: _finished_.
 I may use it or develop in future or change to something else than Journal of things and dates user learned.
 
 ## Inspiration
-Project inspired by Jose Salvatierra
-Founder of Teclado and Software Engineer, based on his Udemy course: The Complete Python/PostgreSQL Course 2.0
-I found this course really valuable and helpful, in developing my Python and databases skills.
+Project inspired by Jose Salvatierra.Founder of Teclado and Software Engineer.
+Based on his Udemy course: The Complete Python/PostgreSQL Course 2.0.
+
+I found this course really valuable and helpful in developing my Python and databases skills. Sincere thanks to the autor.
 
 ## Contact
-Created by [@Luksos9](https://github.com/Luksos9)(lukaszszumilas.9@wp.pl) - feel free to contact me!
+Created by [@Luksos9](https://github.com/Luksos9) [@E-mail](lukaszszumilas.9@wp.pl) - feel free to contact me!
 
