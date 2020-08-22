@@ -31,7 +31,7 @@ The project purpose was to solidify my Python skills and increase my SQL Databas
 
 5.Sqlite3 usage and many useful/needed commands.
 
-6.How to avoid SQL injection attacks
+6.How to avoid SQL injection attacks.
 
 ## Technologies
 * Python  - version 3.8.5
