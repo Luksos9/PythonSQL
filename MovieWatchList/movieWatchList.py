@@ -28,13 +28,17 @@ def prompt_add_movie():
 
 
 def print_movie_list(heading, movies):
-    print(f"---- {heading} movies ----\n")
+    print(f"-- {heading} movies --\n")
     for movie in movies:
         movie_date = datetime.datetime.fromtimestamp(movie[1])
         normal_date = movie_date.strftime("%d %b %Y")
         print(f'{movie[0]} (on {normal_date})')
-    print("---> \n")
+    print("----" , "\n")
 
+
+def prompt_watch_movie():
+    movie_title = input("Enter movie title you've watched: ")
+    moviesdatabase.watch_movie(movie_title)
 
 # Main loop that prompts input from user and takes corresponding action
 while (user_input := input(menu)) != '6':
@@ -47,8 +51,9 @@ while (user_input := input(menu)) != '6':
         movies = moviesdatabase.get_movies(False) # False if all movies
         print_movie_list("All", movies)
     elif user_input == '4':
-        pass
+        prompt_watch_movie()
     elif user_input == '5':
-        pass
+        movies = moviesdatabase.get_watched_movies()
+        print_movie_list("Watched", movies)
     else:
         print("Invalid input! Please enter number between (1-6): ")
