@@ -25,7 +25,7 @@ def add_movie(title, release_timestamp):
     with connection:
         connection.execute(INSERT_MOVIES, (title, release_timestamp))
 
-def get_movies(upcoming=False):
+def get_movies(upcoming=False): # upcoming = True if we want upcoming, False if we want All movies
     with connection:
         cursor = connection.cursor()
         if upcoming:

@@ -27,12 +27,20 @@ def prompt_add_movie():
     moviesdatabase.add_movie(title, timestamp)
 
 
+def print_movie_list(movies):
+    print("---- Upcoming movies ----\n")
+    for movie in movies:
+        print(f'{movie[0]} (on {movie[1]})')
+    print("---> \n")
+
+
 # Main loop that prompts input from user and takes corresponding action
 while (user_input := input(menu)) != '6':
     if user_input == '1':
         prompt_add_movie()
     elif user_input == '2':
-        pass
+        movies = moviesdatabase.get_movies(True) # True because we want upcoming movies (see get_movies func)
+        print_movie_list(movies)
     elif user_input == '3':
         pass
     elif user_input == '4':
