@@ -62,9 +62,9 @@ def prompt_search_movies():
     search_term = input("Enter whole or partial movie title: ")
     movies = moviesdatabase.search_movies(search_term)
     if movies:
-        print_movie_list("Movies that've been found: ", movies)
+        print_movie_list("Movies that've been found:", movies)
     else:
-        print("No movies were found for searched term: {}".format(search_term))
+        print("No movies were found for that searched term")
 
 
 # Main loop that prompts input from user and takes corresponding action
@@ -86,4 +86,4 @@ while (user_input := input(menu)) != '8':
     elif user_input == "7":
         prompt_search_movies()
     else:
-        print("Invalid input! Please enter number between (1-6): ")
+        print("Invalid input! Please enter number between (1-8): ")

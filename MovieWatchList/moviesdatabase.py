@@ -8,7 +8,7 @@ CREATE_MOVIES_TABLE = """CREATE TABLE IF NOT EXISTS movies (
 );"""
 
 # There i can add more info about users (their emails, locations etc.)
-CREATE_USERS_TABLE = """CREATE TABLE users(
+CREATE_USERS_TABLE = """CREATE TABLE IF NOT EXISTS users(
     username TEXT PRIMARY KEY
 );"""
 
@@ -68,7 +68,7 @@ def search_movies(search_term):
     with connection:
         cursor = connection.cursor()
         cursor.execute(SEARCH_MOVIES, (f"%{search_term}%",))  # This way it will show "Matrix" even if only "Mat" typed
-
+        return cursor.fetchall()
 
 def watch_movie(username, movie_id):
     with connection:
