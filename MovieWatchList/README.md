@@ -5,3 +5,5 @@
 2. How to extract needed data from database using SELECT/WHERE.
 
 3. How to use UPDATE query (example in: def watch_movie(title))
+
+4. Using efficiently datetime module and it's classes / functions.
