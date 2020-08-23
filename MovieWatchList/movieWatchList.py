@@ -9,7 +9,8 @@ menu = """Please select what you want to do:
 4) Watch a movie
 5) View watched movies.
 6) Add new user.
-7) Exit program.
+7) Search for a movie.
+8) Exit.
 
 Your selection: """
 # Here is welcome message
@@ -57,8 +58,17 @@ def prompt_view_watched_movies():
         print("You haven't watched any movie yet.")
 
 
+def prompt_search_movies():
+    search_term = input("Enter whole or partial movie title: ")
+    movies = moviesdatabase.search_movies(search_term)
+    if movies:
+        print_movie_list("Movies that've been found: ", movies)
+    else:
+        print("No movies were found for searched term: {}".format(search_term))
+
+
 # Main loop that prompts input from user and takes corresponding action
-while (user_input := input(menu)) != '7':
+while (user_input := input(menu)) != '8':
     if user_input == '1':
         prompt_add_movie()
     elif user_input == '2':
@@ -73,5 +83,7 @@ while (user_input := input(menu)) != '7':
         prompt_view_watched_movies()
     elif user_input == "6":
         prompt_add_user()
+    elif user_input == "7":
+        prompt_search_movies()
     else:
         print("Invalid input! Please enter number between (1-6): ")
