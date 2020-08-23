@@ -72,6 +72,7 @@ def search_movies(search_term):
         cursor.execute(SEARCH_MOVIES, (f"%{search_term}%",))  # This way it will show "Matrix" even if only "Mat" typed
         return cursor.fetchall()
 
+
 def watch_movie(username, movie_id):
     with connection:
         connection.execute(INSERT_WATCHED_MOVIE, (username, movie_id))
