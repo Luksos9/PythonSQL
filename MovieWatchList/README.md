@@ -7,3 +7,7 @@
 3. How to use UPDATE query (example in: def watch_movie(title))
 
 4. Using efficiently datetime module and it's classes / functions.
+
+5. Splitting tables to support multiple users.
+
+6. How to separate project into different parts.

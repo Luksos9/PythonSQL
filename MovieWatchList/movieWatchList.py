@@ -33,27 +33,37 @@ def print_movie_list(heading, movies):
         movie_date = datetime.datetime.fromtimestamp(movie[1])
         normal_date = movie_date.strftime("%d %b %Y")
         print(f'{movie[0]} (on {normal_date})')
-    print("----" , "\n")
+    print("----", "\n")
+
+
+def print_watched_movie_list(username, movies):
+    print(f"-- {username}'s watched movies --")
+    for movie in movies:
+        print(f"{movie[1]}")
+    print("---- \n")
 
 
 def prompt_watch_movie():
+    username = input("Username: ")
     movie_title = input("Enter movie title you've watched: ")
-    moviesdatabase.watch_movie(movie_title)
+    moviesdatabase.watch_movie(username, movie_title)
+
 
 # Main loop that prompts input from user and takes corresponding action
 while (user_input := input(menu)) != '6':
     if user_input == '1':
         prompt_add_movie()
     elif user_input == '2':
-        movies = moviesdatabase.get_movies(True) # True if upcoming
+        movies = moviesdatabase.get_movies(True)  # True if upcoming
         print_movie_list("Upcoming", movies)
     elif user_input == '3':
-        movies = moviesdatabase.get_movies(False) # False if all movies
+        movies = moviesdatabase.get_movies(False)  # False if all movies
         print_movie_list("All", movies)
     elif user_input == '4':
         prompt_watch_movie()
     elif user_input == '5':
-        movies = moviesdatabase.get_watched_movies()
-        print_movie_list("Watched", movies)
+        username = input("Username: ")
+        movies = moviesdatabase.get_watched_movies(username)
+        print_watched_movie_list(username, movies)
     else:
         print("Invalid input! Please enter number between (1-6): ")
