@@ -1,3 +1,4 @@
+import datetime
 import moviesdatabase
 
 # Here is menu that is displayed so user knows what to input
@@ -16,10 +17,20 @@ welcome = "Welcome to movie watchlist application!"
 print(welcome)
 moviesdatabase.create_tables()
 
+
+def prompt_add_movie():
+    title = input("Movie title: ")
+    release_date = input("Release date (dd-mm-YYYY)")
+    parsed_date = datetime.datetime.strptime(release_date, "%d-%m-%Y")
+    timestamp = parsed_date.timestamp()
+
+    moviesdatabase.add_movie(title, timestamp)
+
+
 # Main loop that prompts input from user and takes corresponding action
 while (user_input := input(menu)) != '6':
     if user_input == '1':
-        pass
+        prompt_add_movie()
     elif user_input == '2':
         pass
     elif user_input == '3':
