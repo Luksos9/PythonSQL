@@ -14,7 +14,7 @@ menu = """Please select what you want to do:
 
 Your selection: """
 # Here is welcome message
-welcome = "Welcome to movie watchlist application!"
+welcome = "Welcome to movie watchlist application!\n"
 
 print(welcome)
 moviesdatabase.create_tables()
@@ -29,7 +29,7 @@ def prompt_add_movie():
     moviesdatabase.add_movie(title, timestamp)
 
 
-def print_movie_list(heading, movies):
+def print_movie_list(heading, movies):-
     print(f"-- {heading} movies --\n")
     for _id, title, release_date in movies:  # I am using _id so build in function "id" is not overwritten
         movie_date = datetime.datetime.fromtimestamp(release_date)
