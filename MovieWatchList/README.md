@@ -30,3 +30,6 @@ Based on his Udemy course: The Complete Python/PostgreSQL Course 2.0.
 
 I found this course really valuable and helpful in developing my Python and databases skills.
 Sincere thanks to the autor.
+
+## Contact
+Created by [@Luksos9](https://github.com/Luksos9) [@E-mail](lukaszszumilas.9@wp.pl) - feel free to contact me!
