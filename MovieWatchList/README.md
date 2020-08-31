@@ -23,3 +23,10 @@
 * PyCharm - 2020.1.4
 * Windows 10
 * DB Browser (SQLite)
+
+## Inspiration
+Project inspired by Jose Salvatierra.Founder of Teclado and Software Engineer.
+Based on his Udemy course: The Complete Python/PostgreSQL Course 2.0.
+
+I found this course really valuable and helpful in developing my Python and databases skills.
+Sincere thanks to the autor.
