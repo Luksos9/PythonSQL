@@ -16,3 +16,10 @@
 
 8. What are indexes in SQL, how to create them and how they affect performance. I added it in this program.
 
+## Technologies
+
+* Python  - version 3.8.5
+* git     - version 2.27.0.windows.1
+* PyCharm - 2020.1.4
+* Windows 10
+* DB Browser (SQLite)
