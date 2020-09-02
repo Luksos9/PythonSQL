@@ -1,5 +1,5 @@
 import datetime
-import moviesdatabase
+import database
 
 # Here is menu that is displayed so user knows what to input
 menu = """Please select what you want to do:
@@ -17,7 +17,7 @@ Your selection: """
 welcome = "Welcome to movie watchlist application!\n"
 
 print(welcome)
-moviesdatabase.create_tables()
+database.create_tables()
 
 
 def prompt_add_movie():
@@ -26,7 +26,7 @@ def prompt_add_movie():
     parsed_date = datetime.datetime.strptime(release_date, "%d-%m-%Y")
     timestamp = parsed_date.timestamp()
 
-    moviesdatabase.add_movie(title, timestamp)
+    database.add_movie(title, timestamp)
 
 
 def print_movie_list(heading, movies):
@@ -41,17 +41,17 @@ def print_movie_list(heading, movies):
 def prompt_watch_movie():
     username = input("Enter your username: ")
     movie_id = input("Movie ID: ")
-    moviesdatabase.watch_movie(username, movie_id)
+    database.watch_movie(username, movie_id)
 
 
 def prompt_add_user():
     username = input("Username: ")
-    moviesdatabase.add_user(username)
+    database.add_user(username)
 
 
 def prompt_view_watched_movies():
     username = input("Username: ")
-    movies = moviesdatabase.get_watched_movies(username)
+    movies = database.get_watched_movies(username)
     if movies:
         print_movie_list(f"{username} watched movies: ", movies)
     else:
@@ -60,7 +60,7 @@ def prompt_view_watched_movies():
 
 def prompt_search_movies():
     search_term = input("Enter whole or partial movie title: ")
-    movies = moviesdatabase.search_movies(search_term)
+    movies = database.search_movies(search_term)
     if movies:
         print_movie_list("Movies that've been found:", movies)
     else:
@@ -72,10 +72,10 @@ while (user_input := input(menu)) != '8':
     if user_input == '1':
         prompt_add_movie()
     elif user_input == '2':
-        movies = moviesdatabase.get_movies(True)  # True if upcoming
+        movies = database.get_movies(True)  # True if upcoming
         print_movie_list("Upcoming", movies)
     elif user_input == '3':
-        movies = moviesdatabase.get_movies(False)  # False if all movies
+        movies = database.get_movies(False)  # False if all movies
         print_movie_list("All", movies)
     elif user_input == '4':
         prompt_watch_movie()
