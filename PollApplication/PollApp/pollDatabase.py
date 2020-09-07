@@ -82,7 +82,7 @@ def get_option(connection, option_id: int) -> Option:
     with connection:
         with connection.cursor() as cursor:
             cursor.execute(SELECT_OPTION, (option_id,))
-            return cursor.fetchone
+            return cursor.fetchone()
 
 
 def add_option(connection, option_text, poll_id: int):

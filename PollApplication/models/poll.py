@@ -14,6 +14,9 @@ class Poll:
         self.title = title
         self.owner = owner
 
+    def __str__(self):  # string representation for poll object, so i can print it
+        return f"{self.id}: {self.title} (created by {self.owner})"
+
     def __repr__(self):
         return f"Poll({self.name!r}, {self.owner!r}, {self.id!r}"  # Poll('title, 'owner', 1)
 
