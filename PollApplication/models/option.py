@@ -1,5 +1,5 @@
 from typing import List
-from connection import create_connection
+from connections import create_connection
 import pollDatabase
 
 
@@ -19,9 +19,9 @@ class Option:
         self.id = new_option_id
 
     @classmethod
-    def get(cls, poll_id: int) -> "Option":
+    def get(cls, option_id: int) -> "Option":
         connection = create_connection()
-        poll = pollDatabase.get_poll(connection, poll_id)
+        poll = pollDatabase.get_option(connection, option_id)
         connection.close()
         return cls(poll[1], poll[2], poll[0])
 

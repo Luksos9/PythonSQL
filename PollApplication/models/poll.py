@@ -1,6 +1,6 @@
 from typing import List
 from connections import create_connection
-from models import Option
+from models.option import Option
 import pollDatabase
 
 """This creates a class whose objects we can use to interact with the system in a bit of an easier way.
