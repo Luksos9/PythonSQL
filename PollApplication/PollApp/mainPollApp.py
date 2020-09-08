@@ -4,7 +4,7 @@ import pollDatabase
 from models.poll import Poll
 from models.option import Option
 
-from connection_pool import pool
+from connection_pool import get_connection
 
 DATABASE_PROMPT = "Enter the DATABASE_URI value or leave empty to load from .env file: "
 
@@ -86,9 +86,8 @@ MENU_OPTIONS = {
 
 
 def menu():
-    connection = pool.getconn()
-    pollDatabase.create_tables(connection)
-    pool.putconn(connection)
+    with get_connection() as connection:
+        pollDatabase.create_tables(connection)
 
     while (selection := input(MENU_PROMPT)) != "6":
         try:
