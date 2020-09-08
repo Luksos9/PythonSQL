@@ -27,6 +27,7 @@ SELECT_VOTES_FOR_OPTION = "SELECT * FROM votes WHERE option_id = %s;"
 INSERT_POLL_RETURN_ID = "INSERT INTO polls (title, owner_username) VALUES (%s, %s) RETURNING id;"
 INSERT_OPTION_RETURN_ID = "INSERT INTO options (option_text, poll_id) VALUES (%s, %s) RETURNING id;"
 INSERT_VOTE = "INSERT INTO votes (username, option_id, vote_timestamp) VALUES (%s, %s, %s);"
+INSERT_OPTION = "INSERT INTO options (option_text, poll_id) VALUES (%s, %s) RETURNING id;"
 
 
 @contextmanager
@@ -45,7 +46,8 @@ def create_tables(connection):
 
 # -- polls --
 
-def create_poll(connection, title: str, owner: str):
+
+def create_poll(connection, title: str, owner: str) -> int:
     with get_cursor(connection) as cursor:
         cursor.execute(INSERT_POLL_RETURN_ID, (title, owner))
 
@@ -54,10 +56,9 @@ def create_poll(connection, title: str, owner: str):
 
 
 def get_poll(connection, poll_id: int) -> Poll:
-    with connection:
-        with connection.cursor() as cursor:
-            cursor.execute(SELECT_POLL, (poll_id,))
-            return cursor.fetchone()
+    with get_cursor(connection) as cursor:
+        cursor.execute(SELECT_POLL, (poll_id,))
+        return cursor.fetchone()
 
 
 def get_polls(connection) -> List[Poll]:
@@ -69,7 +70,7 @@ def get_polls(connection) -> List[Poll]:
 def get_latest_poll(connection) -> Poll:
     with get_cursor(connection) as cursor:
         cursor.execute(SELECT_LATEST_POLL)
-        return cursor.fetchone()
+        return cursor.fetchall()
 
 
 def get_poll_options(connection, poll_id: int) -> List[Option]:
@@ -80,17 +81,16 @@ def get_poll_options(connection, poll_id: int) -> List[Option]:
 
 # -- options --
 
+
 def get_option(connection, option_id: int) -> Option:
     with get_cursor(connection) as cursor:
         cursor.execute(SELECT_OPTION, (option_id,))
         return cursor.fetchone()
 
 
-def add_option(connection, option_text, poll_id: int):
+def add_option(connection, option_text: str, poll_id: int):
     with get_cursor(connection) as cursor:
-        cursor.execute(INSERT_OPTION_RETURN_ID, (option_text, poll_id))
-        option_id = cursor.fetchone()[0]
-        return option_id
+        cursor.execute(INSERT_OPTION, (option_text, poll_id))
 
 
 # -- votes --

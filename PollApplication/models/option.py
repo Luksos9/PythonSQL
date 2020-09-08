@@ -2,7 +2,7 @@ import datetime
 from typing import List
 
 import pytz
-from connection_pool import get_connection
+from models.connection_pool import get_connection
 import pollDatabase
 
 

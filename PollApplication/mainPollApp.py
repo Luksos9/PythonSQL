@@ -1,12 +1,12 @@
 import datetime
-from random import random
+import random
 from typing import List
 import pollDatabase
 import pytz
 from models.poll import Poll
 from models.option import Option
+from models.connection_pool import get_connection
 
-from connection_pool import get_connection
 
 DATABASE_PROMPT = "Enter the DATABASE_URI value or leave empty to load from .env file: "
 
@@ -45,7 +45,6 @@ def prompt_vote_poll():
 
     option_id = int(input("Enter option you'd like to vote for: "))
     username = input("Enter the username you'd like to vote as: ")
-
     Option.get(option_id).vote(username)
 
 
@@ -63,7 +62,7 @@ def show_poll_votes():
     try:
         for option, votes in zip(options, votes_per_option):
             percentage = votes / total_votes * 100
-            print(f"{option.text} got {votes} ({percentage.2f}% of total)")
+            print(f"{option.text} got {votes} ({percentage:.2f}% of total)")
     except ZeroDivisionError:
         print("No votes cast for this poll yet.")
 
@@ -76,10 +75,10 @@ def show_poll_votes():
 def _print_votes_for_options(options: List[Option]):
     """Could aslo create model for users, store them in their own table, store timezone info along with data"""
     for option in options:
-        print(f"--{option.text}--")
-        for vote in options.votes:
+        print(f"-- {option.text} --")
+        for vote in option.votes:
             naive_datetime = datetime.datetime.utcfromtimestamp(vote[2])
-            utc_date = pytz.utc.locatlize(naive_datetime)
+            utc_date = pytz.utc.localize(naive_datetime)
             local_date = utc_date.astimezone(pytz.timezone("Europe/London")).strftime("%Y-%m-%d %H:%M")
             print(f"\t- {vote[0]} on {local_date}")
 

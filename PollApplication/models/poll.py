@@ -1,5 +1,5 @@
 from typing import List
-from connection_pool import get_connection
+from models.connection_pool import get_connection
 from models.option import Option
 import pollDatabase
 
@@ -45,7 +45,7 @@ class Poll:
     @classmethod
     def all(cls) -> List["Poll"]:
         with get_connection() as connection:
-            polls = pollDatabase.get_poll(connection)
+            polls = pollDatabase.get_polls(connection)
             return [cls(poll[1], poll[2], poll[0]) for poll in polls]
 
     # Returns latest Poll object
