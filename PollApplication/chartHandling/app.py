@@ -1,9 +1,11 @@
+import sys
+sys.path.insert(0, 'D:\PythonSQL\PollApplication\chartHandling')
 import matplotlib.pyplot as plt
 import charts
 import database
 
 
-MENU_PROMPT = "Enter 'q' to qui, or anything else to chart a new poll"
+MENU_PROMPT = "Enter 'q' to quit, or anything else to chart a new poll"
 POLL_PROMPT = "Select the poll id to create a pie chart of the vote percentages."
 
 
