@@ -21,7 +21,8 @@
 The project purpose was to solidify my Python skills and increase my SQL Database knowledge through creating one.
 
 ## Screenshots
-![](./imgages/menu.png)
+
+<img src="images/menu.png" width="400" >
 
 ## What I Learned
 
