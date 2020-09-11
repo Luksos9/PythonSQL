@@ -1,7 +1,7 @@
 # PythonSQL
 Projects using Python and databases (SQLite, PostgreSQL). PollApplication is most advanced of them.
 
-# Short desriptions of programs
+# Short descriptions of programs
 
 ## Diary App
 
@@ -47,8 +47,8 @@ Projects using Python and databases (SQLite, PostgreSQL). PollApplication is mos
 
 ## PollApplication
 
-
-
 ## Contact
 Created by [@Luksos9](https://github.com/Luksos9)
 **E-mail**: *lukaszszumilas9@wp.pl*, [@linkedIn](https://www.linkedin.com/in/łukasz-szumilas-5b48821aa/) - feel free to contact me!
+
+# Visit directory with each program for more info about them
