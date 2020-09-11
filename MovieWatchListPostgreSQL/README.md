@@ -37,7 +37,7 @@ This program uses PostgreSQL, so in file: _.env.example_ in environmental variab
 
 ## Screenshots
 
-<img src="images/menu.png" width="300" > <img src="images/menu-option-3.png" width="300" >
+<img src="images/menu.png" width="300" > <img src="images/menuOption3.png" width="435" >
 
 ## What i learned?
 
