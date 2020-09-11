@@ -24,7 +24,7 @@ this program more adding some more functionality to it in some time.
 
 ## Screenshots
 
-<img src="images/menu.png" width="400" >
+<img src="images/menu.png" width="300" >
 
 ## What I Learned
 
