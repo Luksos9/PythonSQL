@@ -1,5 +1,5 @@
 # PythonSQL
-Projects using Python and databases (sqlite3, PostgreSQL). PollApplication is most advanced of them.
+Projects using Python and databases (SQLite, PostgreSQL). PollApplication is most advanced of them.
 
 # Short desriptions of programs
 
