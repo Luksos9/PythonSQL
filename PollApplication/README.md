@@ -1,4 +1,6 @@
-## PollApplication
+# PollApplication
+
+Program creating and managing polls
 
 ## Table of contents
 * [General info](#general-info)
@@ -13,8 +15,11 @@
 
 ## General Info
 
-Purpose of this project increasing my Python, Databases, Object oriented programming (OOP), Mathplotlib, Datatime and some more knowledge by using all of that in this project.
-It has many useful functions that let you create, display, vote on Polls and more like displaying votes % on charts, selecting random winner, checking who voted and when regardless of location which will be converted to local time. In Program i used OOP and made Poll and Option classes, what gave much maintability for the Application. I added connection polling for better efficiency. Also used matplotlip to display (or save as file) data of votes from database and stored it in chartHandling directory.
+> Purpose of this project was increasing my Python, Databases, Object oriented programming (OOP), Mathplotlib, Datatime and some more knowledge by using all of that in this project.
+
+It has many useful functions that let you create, display, vote on Polls and more like displaying votes % on charts, selecting random winner, checking who voted and when regardless of location which will be converted to local time.
+
+In Program i used OOP and made Poll and Option classes, what gave much maintability for the Application. I added connection polling for better efficiency. Also used matplotlip to display (or save as file) data of votes from database and stored it in chartHandling directory.
 
 ## Setup
 
@@ -36,7 +41,7 @@ This program uses PostgreSQL, so in file: _.env.example_ in environmental variab
 
 ## Screenshots
 
-
+<img src="images/menu.png" width="300" > <img src="images/menuOption3.png" width="435" >
 
 ## What i Learned?
 
