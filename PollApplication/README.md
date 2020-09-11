@@ -15,7 +15,7 @@ Program creating and managing polls
 
 ## General Info
 
-> Purpose of this project was increasing my Python, Databases, Object oriented programming (OOP), Mathplotlib, Datatime and some more knowledge by using all of that in this project.
+> Purpose of this project was increasing my knowledge of Python, Databases, Object oriented programming (OOP), Mathplotlib, Datatime and some more by using it in this project.
 
 It has many useful functions that let you create, display, vote on Polls and more like displaying votes % on charts, selecting random winner, checking who voted and when regardless of location which will be converted to local time.
 
