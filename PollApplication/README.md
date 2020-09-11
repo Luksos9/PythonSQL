@@ -41,7 +41,9 @@ This program uses PostgreSQL, so in file: _.env.example_ in environmental variab
 
 ## Screenshots
 
-<img src="images/menu.png" width="300" > <img src="images/menuOption3.png" width="435" >
+<img src="images/menu.png" width="300" > <img src="images/menuOption2.png" width="465" > <img src="images/menuOption1.png" width="450" > 
+
+<img src="images/charts.png" width="435" >
 
 ## What i Learned?
 
