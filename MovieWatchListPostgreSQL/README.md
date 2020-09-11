@@ -33,11 +33,11 @@ Purpose of this project was increasing my PostgreSQL knowledge, throught somethi
 
 ## Setup
 
-This program uses PostgreSQL, so in file: _.env.example_ in environmental variable DATA_URL= ,there should putted a URL link to Postgre database. I didn't share mine to make it safe from changes, as if i didn't everyone could then go into it and delete all it's content.
+This program uses PostgreSQL, so in file: _.env.example_ in environmental variable DATA_URL= ,there should be putted a URL link to Postgre database. I didn't share mine to make it safe from changes, as if i didn't everyone could then go into it and delete all it's content.
 
 ## Screenshots
 
-<img src="images/menu.png" width="300" > <img src="images/menu-option-3.png" width="300" >
+<img src="images/menu.png" width="300" > <img src="images/menuOption3.png" width="435" >
 
 ## What i learned?
 

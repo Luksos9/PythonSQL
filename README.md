@@ -43,9 +43,23 @@ Projects using Python and databases (SQLite, PostgreSQL). PollApplication is mos
 
 > This program is a child of its previous MovieWatchList. The difference between them is mostly that this one uses PostgreSQL as database.
 
-> Main goal with this duplication was practicing switching between SQLite (sqlite3 module) and PostgreSQL (pycopg2) to solidyfying PostgreSQL knowledge.
+> Main goal with this duplication was practicing switching between SQLite (sqlite3 module) and PostgreSQL (pycopg2) and solidyfying PostgreSQL knowledge.
 
 ## PollApplication
+
+> Features of this application:
+
+1) **Create polls** - User enters poll title (for example Django vs Flask or PC vs Console), then name of the owner/creator of the poll, and options to vote (for example: Django, Flask, something else, wait it isn't spanish class?). When user leaves option empty by pressing enter it ends adding options (user is informed about that)
+
+2) **List open polls** - Shows user all polls that were created and stored in database. It shows id, name of poll and creator of the poll.
+
+3) **Vote on a poll** - Prompts user to enter poll which he would he like to vote on (user enters id; he gets it from option 2), then it displays all options to vote in that poll, after choosing option user can enter his name.
+
+4) **Show poll votes** - First asks user to enter which poll, after choosing poll by user it displays all options with % of total votes they got, then ask user if he wants to see who voted for what, if yes shows all users and time when they voted (converting by UTC so it supports different locations)
+
+5) **Select a random winner from a poll option** - It asks user to enter the poll id, then which of the options is winning option, after that it selects a random winner among voters for that option.
+
+6) **Exit** - After inputting 6 program closes.
 
 ## Contact
 Created by [@Luksos9](https://github.com/Luksos9)
