@@ -1,3 +1,37 @@
+# MovieWatchList
+
+> Program keeps track of movies the user is intrested in, and their release dates which he can input by himself.
+
+> Stores which movie the user has already watched
+
+> Adds new users to keep track of their watched movies separately
+
+1) Add new movie.
+2) View upcoming movies.
+3) View all movies
+4) Watch a movie
+5) View watched movies.
+6) Add new user.
+7) Search for a movie.
+8) Exit.
+
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [What I Learned](#what-i-learned)
+* [Technologies](#technologies)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
+
+## General Info
+
+Purpose of this project was increasing my SQLite knowledge, increasing my Python and Database skills and doing something fun. I really enjoyed developing this project and looking forward to do more advanced/challenging or similiar ones.
+
+## Screenshots
+
+<img src="images/menu.png" width="300" >
+
 ## What i learned?
 
 1. To do not reinvent the wheel (I imported needed features from my previous project)
@@ -14,7 +48,7 @@
 
 7. How to separate project into different parts and testing them.
 
-8. What are indexes in SQL, how to create them and how they affect performance. I added it in this program.
+8. What are binary trees and how they work, what are indexes in SQL, how to create them and how they affect performance. I added it in this program.
 
 ## Technologies
 
@@ -24,6 +58,9 @@
 * Windows 10
 * DB Browser (SQLite)
 
+## Status
+Project is: _currently finished but I think im going to develop it some more in some time_. 
+
 ## Inspiration
 Project inspired by Jose Salvatierra.Founder of Teclado and Software Engineer.
 Based on his Udemy course: The Complete Python/PostgreSQL Course 2.0.
@@ -32,4 +69,6 @@ I found this course really valuable and helpful in developing my Python and data
 Sincere thanks to the autor.
 
 ## Contact
-Created by [@Luksos9](https://github.com/Luksos9) [@E-mail](lukaszszumilas.9@wp.pl) - feel free to contact me!
+Created by [@Luksos9](https://github.com/Luksos9)
+
+**E-mail**: *lukaszszumilas9@wp.pl*, [@linkedIn](https://www.linkedin.com/in/łukasz-szumilas-5b48821aa/) - feel free to contact me!
