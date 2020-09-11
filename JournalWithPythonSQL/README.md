@@ -8,6 +8,7 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Screenshots](#screenshots)
 * [What I Learned](#what-i-learned)
 * [Technologies](#technologies)
 * [Status](#status)
@@ -18,6 +19,9 @@
 ## General Info
 
 The project purpose was to solidify my Python skills and increase my SQL Database knowledge through creating one.
+
+## Screenshots
+![](./imgages/menu.png)
 
 ## What I Learned
 
