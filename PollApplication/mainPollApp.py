@@ -73,7 +73,7 @@ def show_poll_votes():
 
 
 def _print_votes_for_options(options: List[Option]):
-    """Could aslo create model for users, store them in their own table, store timezone info along with data"""
+    """Could also create model for users, store them in their own table, store timezone info along with data"""
     for option in options:
         print(f"-- {option.text} --")
         for vote in option.votes:
